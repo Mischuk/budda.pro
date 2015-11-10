@@ -1,0 +1,271 @@
+.cart-profile
+  clearfix()
+  position relative
+  top -65px
+.lead
+  padding 0 20px
+  clearfix()
+.sidebar-cart
+  float right
+  width 270px
+.cart
+  float left
+  width 540px
+  margin-left 285px
+  padding: 10px 20px 0 20px;
+  .header
+    position relative
+    padding-left 70px
+    &:after
+      content ''
+      background: url('../images/sprite.png') no-repeat -14px -312px;
+      width: 41px;
+      height: 42px;
+      position absolute
+      left 0
+      top 50%
+      margin-top -25px
+    h2
+      font-size 30px
+    .small-headling
+      font-size 13px
+      margin-top 5px
+.cart-list
+  margin-top 20px
+  margin-bottom 30px
+  .item
+    background-color #f7f7f7
+    border 1px solid #dcdcdc
+    border-radius 5px
+    margin-bottom 15px
+    padding-left 25px
+    padding-top 15px
+    padding-bottom 15px
+    height 90px
+    clearfix()
+  .number
+    float left
+    width 24px
+    span
+      position relative
+      top 4px
+      display block
+      width 24px
+      height 24px
+      font-size 12px
+      text-align center
+      line-height 18px
+      border 2px solid $black
+      border-radius 50%
+      font-weight bold
+  .title
+    float left
+    margin-left 20px
+    width 250px
+    .main-title
+      font-size 21px
+      line-height 1
+    .small-title
+      font-size 13px
+      line-height 1
+      margin-top 15px
+  .options
+    position relative
+    float right
+    width 170px
+    height 100%
+    .counter
+      position static
+      height 100%
+      .single-price,
+      .total-price
+        position absolute
+        right 20px
+        width 115px
+        line-height 29px
+        height 29px
+        span
+          font-size 22px
+      .single-price
+        border-bottom 1px dashed #e2e2e2
+        padding-right 0
+        top 0
+        height 32px
+      .total-price
+        top 33px
+        text-align left
+        padding-left 0
+      form
+        left 0
+        margin-left 0
+.cart-bonus
+  padding 15px 0
+  border-top 1px dashed #e2e2e2
+.cart-bonus-item
+  position relative
+  padding-left 100px
+  border-bottom: 1px dashed #e2e2e2;
+  padding-bottom 5px
+  .total-bonus
+    position absolute
+    left 10px
+    top 0
+    height 38px
+    line-height 38px
+    background-color $red
+    color #ebebeb
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-right 7px
+    padding-left 7px
+    font-size 26px
+    &:after
+      content ''
+      position absolute
+      left -10px
+      top 0
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 19px 10px 19px 0;
+      border-color: transparent $red transparent transparent
+  .bonus-description
+    h4
+      font-size 15px
+      line-height 1
+      margin-bottom 10px
+      font-weight bold
+    p
+      margin 0
+      font-size 13px
+      line-height 1
+  .total-minus-bonus
+    text-align right
+    color $red
+    font-size 30px
+    line-height 1.5
+    font-weight bold
+.cart-total
+  margin-top 20px
+  position relative
+  text-align center
+  font-weight bold
+  font-size 30px
+  &:after, &:before
+    content ''
+    position absolute
+    width 145px
+    height 1px
+    top 50%
+    background-color #dcdcdc
+  &:after
+    right 0
+  &:before
+    left 0
+
+  span
+    &:after
+      content 'Итого'
+      position absolute
+      left 0
+      top -16px
+      width 100%
+      height 16px
+      line-height 16px
+      font-size 12px
+      color #bebebe
+      font-style italic
+      text-align center
+.cart-order
+  margin-top 20px
+  text-align center
+  a
+    display inline-block
+    background-color $red
+    color #fff
+    font-size 15px
+    height 40px
+    line-height 40px
+    width 200px
+    border-radius 5px
+    box-shadow 0 2px 5px rgba(0,0,0,.25)
+    &:hover
+      background-color $red + 15%
+    &:active
+      position relative
+      top 2px
+      box-shadow 0 1px 1px rgba(0,0,0,.55)
+.sidebar-cart
+  margin-top 13px
+  .type-1
+    .icon
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -81px -312px;
+        width: 40px;
+        height: 38px;
+        position absolute
+        left 50%
+        top 10px
+        margin-left -(@width/2)
+  .type-2
+    .icon
+      &:after
+        content ''
+        background url('../images/content/bonus-2.png') 0 0 no-repeat
+        width 70px
+        height 38px
+        position absolute
+        left 50%
+        margin-left -(@width/2)
+        top 10px
+  .bonus-item
+    position relative
+    border 1px solid #dcdcdc
+    border-radius 5px
+    margin-bottom 15px
+    padding 15px
+    padding-bottom 40px
+    cursor default
+    &:after
+      content ''
+      position absolute
+      right 10px
+      top 10px
+      background: url('../images/sprite.png') no-repeat -127px -96px;
+      width: 13px;
+      height: 13px;
+    &.active
+      border-color $red
+      &:after
+        background-position -153px -96px
+    .icon
+      position relative
+      height 80px
+      text-align center
+      padding-top 50px
+      span
+        font-weight bold
+    .bonus-description
+      margin-top 5px
+      margin-bottom 5px
+      font-size 13px
+      line-height 1.3
+      text-align center
+    .footer
+      position absolute
+      left 0
+      bottom 10px
+      width 100%
+      padding-left 10px
+      padding-right 10px
+      clearfix()
+      .left
+        float left
+        color #bebebe
+        font-size 12px
+        font-style italic
+      .right
+        float right
+        color $red
+        font-size 16px

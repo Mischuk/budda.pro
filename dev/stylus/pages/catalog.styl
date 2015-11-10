@@ -1,0 +1,163 @@
+.catalog
+  position relative
+  clearfix()
+.catalog-list
+  width 840px
+  float left
+.left-sidebar
+  width 300px
+  float left
+  background-color #edefef
+  border 2px solid #dcdcdc
+  .accordrion-item:first-child .accordrion-item-link
+    border-top none !important
+  .accordrion-item-link
+    position relative
+    display table
+    width 100%
+    height 90px
+    border-top 2px solid #dcdcdc
+    .title
+      display table-cell
+      vertical-align middle
+      font-size 16px
+      line-height 1
+      color $black
+      padding-left 100px
+    .icon-1,
+    .icon-2,
+    .icon-3,
+    .icon-4
+      position absolute
+      width 52px
+      height 52px
+      left 20px
+      top 20px
+
+    .icon-1
+      background url(../images/content/catalog/icon-1.png) 0 0 no-repeat
+    .icon-2
+      background url(../images/content/catalog/icon-2.png) 0 0 no-repeat
+    .icon-3
+      background url(../images/content/catalog/icon-3.png) 0 0 no-repeat
+    .icon-4
+      background url(../images/content/catalog/icon-4.png) 0 0 no-repeat
+  .accordion-content
+    padding 0 20px
+    a
+      display block
+      height 45px
+      line-height 45px
+      padding-left 25px
+      padding-right 25px
+      font-size 16px
+      color $black
+      border-top 1px solid #dcdcdc
+      &:hover
+        background-color #a6c82a
+        color #fff
+        border-radius 5px
+  .accordrion-item-link.active
+    height auto
+    .icon-1, .icon-2, .icon-3, .icon-4
+      &:after
+        content ''
+        position absolute
+        left 75px
+        top 50%
+        margin-top -0.5px
+        height 1px
+        width 180px
+        border-bottom 1px dashed #dcdcdc
+    .title
+      display block
+      font-size 24px
+      padding-left 20px
+      padding-top 80px
+      padding-bottom 20px
+.catalog-list
+  padding 20px
+  clearfix()
+  .item
+    position relative
+    float left
+    width 49%
+    margin-left 2%
+    margin-bottom 2%
+    background-color #f7f7f7
+    border 1px solid #dcdcdc
+    border-radius 5px
+    padding 5px
+    display table
+    table-layout fixed
+    &:nth-child(2n+1)
+      clear left
+      margin-left 0
+    .catalog-item-descriptions,
+    .image
+      display table-cell
+      vertical-align top
+    .image
+      background-color #fff
+      vertical-align middle
+      border-radius 5px
+      box-shadow 0 0 5px 1px rgba(0,0,0, .15)
+    .catalog-item-descriptions
+      padding 10px
+      .title
+        display inline-block
+        color $black
+        font-size 21px
+        margin-bottom 10px
+        &:hover
+          text-decoration underline
+      p
+        margin 0
+        font-size 13px
+        line-height 1
+        max-height 3em
+        overflow hidden
+        margin-bottom 10px
+      .price
+        color #30898c
+        font-size 21px
+      .add-to-cart
+        width 100%
+        margin-top 20px
+        a
+          display block
+          width 153px
+          height 60px
+          margin 0 auto
+          background: url('../images/sprite.png') no-repeat -250px -316px;
+          &:hover
+            background-position -250px -387px
+.sort-val-show
+  position absolute
+  right 17px
+  bottom -80px
+  z-index 20
+  ul
+    font-size 0
+    display inline-block
+  li
+    display inline-block
+    margin-left 3px
+    margin-right 3px
+    a
+      display block
+      font-size 15px
+      width 38px
+      height 38px
+      line-height 36px
+      text-align center
+      background-color #fff
+      border-radius 50%
+      color $black
+      border 1px solid #dddddd
+      &:hover,
+      &.current
+        background-color $red
+        color #fff
+        border-color $red
+        box-shadow 0 2px 3px 1px rgba(0,0,0,.45)

@@ -1,0 +1,122 @@
+.item-profile
+  .lead
+    clearfix()
+    padding 0 20px
+  .zoom-gallery
+    float left
+    width 285px
+  .description
+    width 540px
+    float left
+    padding 10px 20px 0 20px
+    .header
+      position relative
+      padding-bottom 50px
+      border-bottom 1px solid #dcdcdc
+    h2
+      font-size 30px
+    .small-headling
+      font-size 13px
+      margin-top 5px
+    .views
+      position absolute
+      right 0
+      top 0
+      font-size 16px
+      color $red
+    article
+      h3
+        margin-top 45px
+        font-size 21px
+      p
+        font-size 18px
+        line-height 26px
+        color #888888
+    .produced
+      span
+        position relative
+        cursor default
+        display inline-block
+        background-color #2a2c2b
+        color #fff
+        border-radius 5px
+        font-size 13px
+        height 30px
+        line-height 30px
+        padding 0 10px
+        margin-left 9px
+        &:before
+          content ''
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 15px 12px 15px 0;
+          border-color: transparent #000000 transparent transparent;
+          position absolute
+          left -9px
+          top 0
+  .sidebar
+    float left
+    width 270px
+    .profile-options
+      border 1px solid #dcdcdc
+      border-radius 5px
+      padding 20px 10px
+      .buy
+        a
+          display block
+          background: url('../images/sprite.png') no-repeat 0 -156px;
+          width: 210px;
+          height: 56px;
+          margin 20px auto
+          &:hover
+            background-position -234px -155px
+      .order
+        a
+          display block
+          background: url('../images/sprite.png') no-repeat 0 -236px;
+          width: 210px;
+          height: 56px;
+          margin 0 auto
+          &:hover
+            background-position -234px -235px
+    .sizes
+      margin-top 20px
+      padding-left 10px
+      padding-right 10px
+      h4
+        margin-bottom 20px
+        font-size 21px
+      .list
+        clearfix()
+        .item
+          float left
+          width 52px
+          margin-left 10px
+          margin-bottom 10px
+          &:nth-child(4n+1)
+            margin-left 0
+            clear left
+.zoom-gallery
+  a
+    display block
+    float left
+    width 85px
+    height 85px
+    margin-left 15px
+    margin-bottom 15px
+    &:first-child
+      width 100%
+      margin-left 0
+      height auto
+      margin-bottom 15px
+      img
+        width 100%
+    &:nth-child(2)
+      margin-left 0
+    &:nth-child(5n)
+      clear left
+      margin-left 0
+  a img
+    width 100%
+    height 100%

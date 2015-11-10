@@ -4,7 +4,12 @@
 html, body
   height 100%
   min-width $min-width + 50
+footer
+  width $min-width
+  margin 0 auto
 .container
+  width $min-width
+  margin 0 auto
   min-height 100%
   min-width $min-width
   margin-bottom -($footer-height)
@@ -23,6 +28,16 @@ footer, .container:after
 /*!=================
   Basic elements
 ====================*/
+body
+  font-family: Tahoma,Verdana,Segoe,sans-serif
+  color $black
+  font-size 18px
+  line-height 26px
+  background url(../images/bg.png) 0px 0 repeat
+  background-attachment fixed
+.container
+  background-color #ebebeb
+  box-shadow 0 0 7px 1px rgba(0,0,0, .25)
 img{
   display: inline-block;
   vertical-align: middle;
@@ -39,3 +54,280 @@ textarea{
 /*!=================
   Extended classes
 ====================*/
+footer
+  overflow hidden
+  position relative
+.go-to-top
+  width 50px
+  height 50px
+  position absolute
+  left 50%
+  top 50%
+  margin-top -(@height/2)
+  margin-left -(@width/2)
+  border-radius 50%
+  overflow hidden
+  text-indent -9999px
+  opacity 0
+  transform translateY(200%)
+  anim(all, .45s)
+  &.show
+    opacity 1
+    transform translateY(0)
+  a
+    position relative
+    display block
+    border 5px solid #e8c5bf
+    width 100%
+    background-color $red
+    height 100%
+    border-radius 50%
+    anim(all, .25s)
+    &:after
+      content ''
+      background: url('../images/sprite.png') no-repeat -166px -48px;
+      width: 20px;
+      height: 13px;
+      position absolute
+      left 50%
+      margin-left -(@width/2)
+      top 50%
+      margin-top -(@height/2)
+    &:hover
+      border 0px solid #e8c5bf
+/* Breadcrumbs */
+.breadcrumbs
+  margin-top 50px
+  margin-bottom 25px
+  margin-left 20px
+  a
+    display block
+    width 200px
+    height 40px
+    line-height 40px
+    border 1px solid #dcdcdc
+    border-radius 5px
+    background-color #f5f5f5
+    color $red
+    text-align center
+    font-size 12px
+    text-transform uppercase
+    anim(background-color, .25s)
+    &:hover
+      background-color #dcdcdc
+/* Radio buttons */
+.radio-custom
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  width 50px
+  height 50px
+  line-height 50px
+  cursor pointer
+  text-align center
+  & > input[type=radio]
+    display none
+  & > span
+    background #fff
+    border solid 1px #e1e1e1
+    display inline-block
+    width 50px
+    height 50px
+    line-height 48px
+    border-radius 100%
+    vertical-align middle
+    font-size 15px
+    &:hover
+      border-color $red
+  & > input[type=radio]:checked
+    & + span
+      border 3px solid $red
+      line-height 44px
+
+
+/* Similar items */
+.similar-items,
+.catalog-list
+  .details,
+  .link
+    width 40px
+    height 40px
+    position absolute
+    left 20px
+    top 20px
+    z-index 20
+    text-indent -9999px
+    background-color rgba(150,150,150,.2)
+    border-radius 50%
+    a
+      position relative
+      display block
+      width 30px
+      height 30px
+      background-color #fff
+      border-radius 50%
+      margin-top 5px
+      margin-left 5px
+      box-shadow 0 0 3px rgba(0,0,0,.25)
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -90px -48px;
+        width: 15px;
+        height: 15px;
+        position absolute
+        left 50%
+        top 50%
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &:hover
+        &:after
+          background-position -117px -48px
+.similar-items
+  margin-top 30px
+  h3
+    font-size 21px
+    padding-left 40px
+    margin-bottom 30px
+  .list
+    padding 0 20px
+    clearfix()
+    .item
+      position relative
+      width 23%
+      float left
+      margin-left 2%
+      background-color #f5f5f5
+      &:nth-child(4n+1)
+        clear left
+        margin-left 0
+  .link + a
+    display block
+    width 100%
+    height 150px
+    img
+      width 100%
+      height 100%
+  .title
+    padding-left 25px
+    padding-right 25px
+  .title a
+    display block
+    text-align center
+    font-size 21px
+    color $black
+    padding 25px 0
+    border-bottom 1px solid #dcdcdc
+    &:hover
+      text-decoration underline
+  .price
+    text-align center
+    font-size 21px
+    color #30898c
+    margin-bottom 20px
+    margin-top 20px
+  .add-to-cart
+    padding-bottom 10px
+    a
+      display block
+      background: url('../images/sprite.png') no-repeat 0 -156px;
+      width: 210px;
+      height: 56px;
+      margin 0 auto
+      &:hover
+        background-position -234px -155px
+
+/* Article */
+.article
+  padding 80px 100px
+  h1
+    font-size 48px
+    line-height 1
+    font-weight bold
+  h2
+    font-weight 30
+    line-height 1
+    font-weight bold
+  p
+    margin 30px 0
+  ul
+    list-style: none;
+    padding:0;
+    margin:0;
+  li
+    padding-left: 0;
+    font-size 18px
+    line-height 26px
+    margin 20px 0
+    &:before
+      content: "• ";
+      padding-right 30px
+      color: $black;
+  .author
+    text-align right
+    font-weight bold
+    font-size 18px
+.counter
+  position relative
+  height 60px
+  clearfix()
+  .single-price,
+  .total-price
+    width 50%
+    line-height 60px
+    span
+      font-size 20px
+  .single-price
+    float left
+    color #b4b4b4
+    padding-right 20px
+  form
+    position absolute
+    left 50%
+    margin-left -15px
+    top 0
+    width 30px
+    height 60px
+    .plus, .minus
+      width 20px
+      height 20px
+      border 1px solid #dcdcdc
+      background-color #fff
+      border-radius 50%
+      color $red
+      position absolute
+      left 50%
+      margin-left -10px
+      font-size 12px
+      &:hover
+        background-color #dcdcdc
+    .plus
+      top 0
+    .minus
+      bottom 0
+    input
+      position absolute
+      left 50%
+      top 50%
+      margin-top -15px
+      margin-left -15px
+      width 30px
+      height 30px
+      border-radius 50%
+      border 1px solid #dcdcdc
+      text-align center
+      line-height 30px
+      color $red
+      font-size 15px
+      background-color #fff
+  .total-price
+    float left
+    color $black
+    padding-left 20px
+    text-align right
+    span
+      font-weight bold
+
+.accordion-content
+  display none

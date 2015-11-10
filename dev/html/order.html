@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Главная</title>
+  //= templates/head.html
+</head>
+<body>
+  <div class="container">
+    //= templates/header.html
+    <div class="breadcrumbs">
+      <a href="#">Назад к корзине</a>
+    </div>
+    <div class="order">
+      <div class="order-sidebar">
+        <ul>
+          <li><a id="go-step-1" class="active" href="#">Контактные данные</a></li>
+          <li><a id="go-step-2" class="disabled" href="#">Адрес доставки</a></li>
+          <li><a id="go-step-3" class="disabled" href="#">Оплата</a></li>
+        </ul>
+      </div>
+      <div class="order-steps">
+          <div class="header">
+            <h2>Оформление заказа</h2>
+            <div class="small-headling">оформить заказ</div>
+          </div>
+          <div class="order-list">
+            <div class="step-1 active">
+              <form id="form-step-1" class="order-form" name="form-step-1" method="POST">
+                  <div class="step-title"><span>1</span><span>Ваше имя</span></div>
+                  <label>
+                    <input name="step-1[name]" type="text" placeholder="Имя" data-validation="[NOTEMPTY]">
+                  </label>
+                  <label>
+                    <input name="step-1[secondname]" type="text" placeholder="Отчество" data-validation="[NOTEMPTY]">
+                  </label>
+                  <label>
+                    <input name="step-1[surname]" type="text" placeholder="Фамилия" data-validation="[NOTEMPTY]">
+                  </label>
+                  <div class="step-title"><span>2</span><span>Контакты</span></div>
+                  <label>
+                    <input name="step-1[email]" type="email" placeholder="Email" data-validation="[EMAIL]">
+                  </label>
+                  <label>
+                    <input name="step-1[tel]" type="text" placeholder="Телефон" data-validation="[NUMERIC]">
+                  </label>
+                  <input type="submit" class="submit" value="Далее">
+              </form>
+            </div>
+
+            <div class="step-2" style="display: none">
+              <form id="form-step-2" class="order-form" name="form-step-2" method="POST">
+                  <div class="step-title"><span>1</span><span>Адрес доставки</span></div>
+                  <label>
+                    <input name="step-2[country]" type="text" placeholder="Страна" data-validation="[NOTEMPTY]">
+                  </label>
+                  <label>
+                    <input name="step-2[city]" type="text" placeholder="Область, город" data-validation="[NOTEMPTY]">
+                  </label>
+                  <label>
+                    <input name="step-2[street]" type="text" placeholder="Улица, дом, квартира" data-validation="[NOTEMPTY]">
+                  </label>
+                  <label>
+                    <input name="step-2[mail]" type="text" placeholder="Почтовый индекс" data-validation="[NOTEMPTY]">
+                  </label>
+                  <div class="step-title"><span>2</span><span>Способ доставки</span></div>
+                  <div class="delivery-type">
+                    <label class="radio-custom-delivery">
+                      <input class="delivery-type-1" name="delivery-type" type="radio"/>
+                      <span class="text">
+                        <span class="icon-1"></span>
+                        <span class="title">Почтой</span>
+                        <span class="free-cost">Бесплатная доставка</span>
+                      </span>
+                    </label>
+                    <label class="radio-custom-delivery">
+                      <input class="delivery-type-2" name="delivery-type" type="radio" checked="checked" />
+                      <span class="text">
+                        <span class="icon-2"></span>
+                        <span class="title">Курьером</span>
+                        <a href="#" class="calc-cost">Расчитать стоимость</a>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="delivery-radius">
+                    <label class="radio-custom-radius">
+                      <input class="delivery-radius-1" name="delivery-radius" type="radio"/>
+                      <span class="text">
+                        <span class="icon">A</span>
+                        <span class="title">+500 руб.</span>
+                      </span>
+                    </label>
+                    <label class="radio-custom-radius">
+                      <input class="delivery-radius-2" name="delivery-radius" type="radio" checked="checked" />
+                      <span class="text">
+                        <span class="icon">B</span>
+                        <span class="title">+1 500 руб.</span>
+                      </span>
+                    </label>
+                    <label class="radio-custom-radius">
+                      <input class="delivery-radius-3" name="delivery-radius" type="radio"/>
+                      <span class="text">
+                        <span class="icon">B</span>
+                        <span class="title">+ 2 500 руб.</span>
+                      </span>
+                    </label>
+                  </div>
+                  <input type="submit" class="submit" value="Далее">
+              </form>
+            </div>
+
+            <div class="step-3" style="display: none">
+              <form id="form-step-3" class="order-form" name="form-step-3" method="POST">
+                  <div class="step-title"><span>1</span><span>Оплата</span></div>
+                  <div class="total-order">
+                    <div class="row">
+                      <div class="icon-1"></div>
+                      <div class="detail">
+                        <div class="title">Скидка</div>
+                        <div class="small-title">При покупке трех товаров Вы получаете скидку "-10%"</div>
+                        <div class="price">
+                          -830 руб.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row delivery-type-2 last-row">
+                      <div class="icon-2"></div>
+                      <div class="detail">
+                        <div class="title">Доставка курьером</div>
+                        <div class="small-title">Доставка курьером. Зона <span class="zona">B</span>.</div>
+                        <div class="price">
+                          +<span class="zona-price">1500</span> руб.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row delivery-type-1 last-row" style="display:none;">
+                      <div class="icon-2"></div>
+                      <div class="detail">
+                        <div class="title">Доставка почтой</div>
+                        <div class="small-title">Бесплатно.</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="total-price">7 500 руб.</div>
+                      <input type="submit" class="submit" value="Оплатить">
+                    </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  //= templates/footer.html
+  //= templates/scripts.html
+</body>
+</html>

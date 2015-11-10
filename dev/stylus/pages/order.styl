@@ -1,0 +1,324 @@
+/* Order */
+.order
+  padding 0 20px
+  clearfix()
+.order-sidebar
+  width 260px
+  float left
+  li
+    margin-bottom 10px
+  a
+    position relative
+    display block
+    width 100%
+    height 40px
+    font-size 16px
+    line-height 40px
+    color $black
+    padding-left 50px
+    &.active
+      color #fff
+      background-color #a6c82a
+      border-radius 5px
+      &:after
+        content ''
+        position absolute
+        left 20px
+        top 50%
+        background: url('../images/sprite.png') no-repeat -178px -96px;
+        width: 14px;
+        height: 14px;
+        margin-top -(@height/2)
+    &.disabled
+      cursor default
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -153px -96px;
+        width: 13px;
+        height: 13px;
+        position absolute
+        left 20px
+        top 50%
+        margin-top -(@height/2)
+.order-steps
+  position relative
+  float right
+  width 790px
+  top -65px
+  .header
+    position relative
+    padding-left 70px
+    &:after
+      content ''
+      background: url('../images/sprite.png') no-repeat -140px -314px;
+      width: 40px;
+      height: 40px;
+      position absolute
+      left 0
+      top 50%
+      margin-top -30px
+    h2
+      font-size 30px
+    .small-headling
+      font-size 13px
+      margin-top 5px
+.order-list
+  position relative
+  .order-form
+    > label
+      position relative
+      display block
+      margin-bottom 15px
+      .error-list
+        position absolute
+        left 560px
+        font-size 13px
+        height 40px
+        line-height 40px
+        top 0
+        color $red
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -226px -99px;
+          width: 13px;
+          height: 13px;
+          position absolute
+          left -18px
+          top 50%
+          margin-top -(@height/2)
+        input
+          border-color #a6c82a
+      input
+        width 510px
+        height 40px
+        border 1px solid #dcdcdc
+        border-radius 5px
+        font-size 13px
+        color #a6a6a6
+        padding-left 25px
+        padding-right 25px
+        &:focus
+          border-color #a6c82a
+          box-shadow inset 0 0 5px rgba(0,0,0,.125)
+        &.error
+          border-color $red
+    .submit
+      width 140px
+      height 40px
+      line-height 40px
+      background-color $red
+      display block
+      margin-left 185px
+      color #fff
+      border none
+      border-radius 5px
+      box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+      &:hover
+        background-color: #e56e58;
+      &:active
+        position: relative;
+        top: 2px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.55);
+  .delivery-type
+    margin-bottom 50px
+    .radio-custom-delivery
+      display inline-block
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+      width 230px
+      height 135px
+      margin-right 40px
+      line-height 1
+      cursor pointer
+      text-align center
+      .text
+        position relative
+        display block
+        border 2px solid #dcdcdc
+        border-radius 5px
+        height 100%
+        width 100%
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -127px -96px;
+          width: 13px;
+          height: 13px;
+          position absolute
+          right 10px
+          top 10px
+      .icon-1
+        display block
+        background: url('../images/sprite.png') no-repeat -67px -378px;
+        width: 40px;
+        height: 32px;
+        margin 20px auto
+      .icon-2
+        display block
+        background: url('../images/sprite.png') no-repeat -68px -422px;
+        width: 44px;
+        height: 32px;
+        margin 20px auto
+      .title
+        display block
+        font-weight bold
+      .free-cost,
+      .calc-cost
+        display block
+        font-size 13px
+        margin-top 10px
+      .calc-cost
+        color $red
+        font-style italic
+        text-decoration underline
+        &:hover
+          text-decoration none
+      & > input[type=radio]
+        display none
+      & > input[type=radio]:checked
+        opacity 1
+        & + .text
+          border-color $red
+          &:after
+            background-position -153px -96px
+          .icon-1
+            background-position -16px -378px
+          .icon-2
+            background-position -14px -422px
+  .delivery-radius
+    width 510px
+    height 288px
+    background url(../images/map.png) 0 0 no-repeat
+    margin-bottom 30px
+    .radio-custom-radius
+      display inline-block
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+      width 32%
+      height 50px
+      line-height 50px
+      cursor pointer
+      text-align center
+      & > input[type=radio]
+        display none
+      & > .text
+        .icon
+          border solid 1px #e1e1e1
+          display inline-block
+          width 20px
+          height 20px
+          line-height 18px
+          font-size 13px
+          border-radius 100%
+          vertical-align middle
+        .title
+          font-size 21px
+          display inline-block
+          vertical-align middle
+      & > input[type=radio]:checked
+        & + .text
+          .icon
+            border 1px solid $red
+            color $red
+          .title
+            color $red
+  .step-title
+    padding-left 25px
+    padding-bottom 25px
+    padding-top 25px
+    span
+      display inline-block
+      cursor default
+      &:first-child
+        width 20px
+        height 20px
+        line-height 18px
+        border 1px solid $black
+        border-radius 50%
+        text-align center
+        font-size 14px
+      &:last-child
+        font-size 21px
+        line-height 18px
+        vertical-align middle
+        margin-left 10px
+  .step-3
+    .row
+      width 510px
+      position relative
+      padding 15px 0
+      padding-left 100px
+      border-top 1px dashed #dcdcdc
+      &:last-child
+        padding-left 0
+        padding-top 40px
+        &:after
+          content 'Итого'
+          position absolute
+          top 25px
+          width 100%
+          text-align center
+          font-size 13px
+          color #bebebe
+          font-style italic
+
+    .icon-1
+      display block
+      position absolute
+      left 0
+      top 15px
+      background url(../images/content/bonus-2.png) 0 0 no-repeat
+      width 70px
+      height 38px
+    .icon-2
+      display block
+      position absolute
+      left 0
+      top 15px
+      background: url('../images/sprite.png') no-repeat -14px -422px;
+      width: 44px;
+      height: 32px;
+    .detail
+      .title
+        font-weight bold
+      .small-title
+        font-size 13px
+      .price
+        text-align right
+        color $red
+        font-weight bold
+        font-size 30px
+        padding-top 10px
+    .total-price
+      margin-bottom 30px
+      position relative
+      font-size 30px
+      font-weight bold
+      text-align center
+      line-height 45px
+      height 45px
+      &:after,
+      &:before
+        content ''
+        height 2px
+        width 150px
+        position absolute
+        top 50%
+        margin-top -1px
+        background-color #dcdcdc
+      &:after
+        right 0
+      &:before
+        left 0
+  overflow hidden
+  .step-1,
+  .step-2,
+  .step-3
+    &.step-ready
+      anim(transform, 1s)
+      transform translateX(1000px)
