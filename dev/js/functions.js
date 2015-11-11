@@ -1,5 +1,6 @@
 $(document).ready(function(){
   //Functions
+
   function orderSteps() {
     $('.order-form').validate({
       settings: {
@@ -115,7 +116,11 @@ $(document).ready(function(){
   };
 
   function gallery() {
-    $('.zoom-gallery').magnificPopup({
+    $("#cart-gallery").responsiveSlides({
+      manualControls: '#cart-gallery-page',
+      auto: false
+    });
+    $('#cart-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
         closeOnContentClick: false,

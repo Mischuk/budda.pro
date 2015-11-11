@@ -97,26 +97,55 @@
           &:nth-child(4n+1)
             margin-left 0
             clear left
-.zoom-gallery
-  a
+
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+#cart-gallery
+  li
+    height 200px
+    a
+      display block
+      width 100%
+      height 100%
+      img
+        width 100%
+        height 100%
+#cart-gallery-page
+  margin-top 15px
+  li
     display block
     float left
     width 85px
     height 85px
     margin-left 15px
     margin-bottom 15px
-    &:first-child
-      width 100%
-      margin-left 0
-      height auto
-      margin-bottom 15px
+    a
       img
         width 100%
-    &:nth-child(2)
+        height 100%
+    &:nth-child(3n+1)
       margin-left 0
-    &:nth-child(5n)
       clear left
-      margin-left 0
-  a img
-    width 100%
-    height 100%
+
