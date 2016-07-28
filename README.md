@@ -93,7 +93,7 @@ frontend/                               # Корень проекта
 │           │   ├── mixins.styl         # Миксины
 │           │   ├── reset.styl          # Сброс стилей
 │           │   └── variables.styl      # Переменные проекта
-│           ├── components              # Глобальные компоненты (анимация, кнопки, элементы форм, таблицы, типографика и другое)
+│           ├── components              # Глобальные компоненты
 │           └── app.styl                # Точка сборки styl файлов
 ├── tmp                                 # Временная папка
 ├── zip                                 # Папка с zip архивами
@@ -106,5 +106,6 @@ frontend/                               # Корень проекта
 ```
 
 ## Контакты
-| Email: mischuk.alexander@gmail.com
-| Skype: mischuk.alexander
+**Email**: mischuk.alexander@gmail.com
+
+**Skype**: mischuk.alexander
