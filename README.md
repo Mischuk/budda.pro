@@ -1,3 +1,4 @@
-<div>Fl.ru: <a href="https://www.fl.ru/users/Axidance/">Axidance</a></div>
-<div>Email: <a href="mailto:mischuk.alexander@gmail.com">mischuk.alexander@gmail.com</a></div>
-<div>Skype: mischuk.alexander</div>
+## Преимущества и возможности
+
+* Шаблонизатор Jade ([gulp-jade](https://www.npmjs.com/package/gulp-jade))
+* Препроцессор Stylus ([gulp-stylus](https://www.npmjs.com/package/gulp-stylus))
