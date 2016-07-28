@@ -106,5 +106,5 @@ frontend/                               # Корень проекта
 ```
 
 ## Контакты
-* Email: mischuk.alexander@gmail.com
-* Skype: mischuk.alexander
+| Email: mischuk.alexander@gmail.com
+| Skype: mischuk.alexander
