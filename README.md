@@ -1,5 +1,7 @@
 # Pikmedia
-**Демо** [frontende.info/pikmedia](http://frontende.info/pikmedia)
+
+## Демо
+[frontende.info/pikmedia](http://frontende.info/pikmedia)
 
 ## Описание
 * Сборщик [Gulp](http://gulpjs.com/)
