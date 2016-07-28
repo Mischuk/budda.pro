@@ -1,12 +1,8 @@
 # Pikmedia
-
-*Шаблон для быстрого старта разработки с [Gulp](http://gulpjs.com/), [Jade](http://jade-lang.com/) и [Stylus](https://learnboost.github.io/stylus/)*
-
-## Демо
 [frontende.info/pikmedia](http://frontende.info/pikmedia)
 
 ## Описание
-
+* Сборщик [Gulp](http://gulpjs.com/)
 * Шаблонизатор [Jade](https://www.npmjs.com/package/gulp-jade)
 * Препроцессор [Stylus](https://www.npmjs.com/package/gulp-stylus) ([карты кода](https://www.npmjs.com/package/gulp-sourcemaps), [rupture для media queries](http://jescalan.github.io/rupture/), [jeet сетка](http://jeet.gs/))
 * [Сервер](https://www.npmjs.com/package/gulp-connect) с livereload
@@ -99,9 +95,7 @@ frontend/                               # Корень проекта
 ├── zip                                 # Папка с zip архивами
 ├── package.json                        # Зависимости для node.js
 ├── .csscomb.json                       # Конфиг для csscomb
-├── .csscomb.json                       # Конфиг для csscomb
 ├── gulpfile.js                         # Конфиг gulp.js
-├── LICENSE                             # Лицензия
 └── README.md                           # Файл который вы читаете
 ```
 
